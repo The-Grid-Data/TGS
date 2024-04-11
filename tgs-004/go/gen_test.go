@@ -65,14 +65,14 @@ var TGS_004 = map[string]ParamDefinition{
 		}
 
 		id := escapeBackticks(record[2])
-		id_low := strings.ToLower(id)
+
 		description := escapeBackticks(record[4])
 		validation := escapeBackticks(record[5])
 		isLinkToAnotherTable := strings.ToLower(record[6]) == "true"
 
 		// Write the map entry for each row using backticks for multiline support
 		entry := fmt.Sprintf("\t`%s`: {\n\t\tID: `%s`,\n\t\tDescription: `%s`,\n\t\tValidation: `%s`,\n\t\tIsLinkToAnotherTable: %t,\n\t},\n",
-			id_low, id, description, validation, isLinkToAnotherTable)
+			id, id, description, validation, isLinkToAnotherTable)
 		_, err = goFile.WriteString(entry)
 		if err != nil {
 			fmt.Println("Error writing entry to definitions.go:", err)
