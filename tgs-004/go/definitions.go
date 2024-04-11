@@ -326,8 +326,8 @@ No: Solana is a Layer 1 blockchain that offers users fast speeds and affordable 
 		Validation: ``,
 		IsLinkToAnotherTable: true,
 	},
-	`socials.socialTypeId`: {
-		ID: `socials.socialTypeId`,
+	`socials.socialType`: {
+		ID: `socials.socialType`,
 		Description: `This is what type of social media link is this: Discord, Farcaster, X, Facebook, Bluesky, Lens, Linkedin`,
 		Validation: ``,
 		IsLinkToAnotherTable: true,
