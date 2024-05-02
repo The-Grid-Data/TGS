@@ -1,5 +1,31 @@
 import os
 import pandas as pd
+import numpy as np
+
+
+def generate_markdown_content(row):
+    """
+    Generate Markdown content based on a row from the DataFrame.
+    """
+    # Extracting individual fields and replacing NaN values with empty strings
+    name = row.get('Name', '') if not pd.isna(row.get('Name', '')) else ''
+    parameter_id = row.get('Parameter ID', '') if not pd.isna(row.get('Parameter ID', '')) else ''
+    type_ = row.get('Type', '') if not pd.isna(row.get('Type', '')) else ''
+    specs = row.get('Specifications', '') if not pd.isna(row.get('Specifications', '')) else ''
+    description = row.get('Description', '') if not pd.isna(row.get('Description', '')) else ''
+    validation_steps = row.get('Validation steps', '') if not pd.isna(row.get('Validation steps', '')) else ''
+    in_dbd = row.get('In DBD', '') if not pd.isna(row.get('In DBD', '')) else ''
+    notes = row.get('Notes:', '') if not pd.isna(row.get('Notes:', '')) else ''
+
+    # Creating the Markdown content
+    md_content = f"# {parameter_id}\n\n"
+
+    for col, val in row.items():
+        if pd.isna(val):
+            val = ''  # Replace NaN with an empty string
+        md_content += f"{col}: {val}\n\n"
+
+    return md_content
 
 
 def generate_markdown_files(csv_file, target_folder):
@@ -12,28 +38,11 @@ def generate_markdown_files(csv_file, target_folder):
 
     # Iterating over each row in the DataFrame
     for _, row in df.iterrows():
-        # Extracting necessary information from the row
+        # Extracting the parameter ID
         parameter_id = row['Parameter ID']
-        name = row.get('Name', '')
-        description = row.get('Description', '')
-        specs = row.get('Specifications', '')
-        validation_steps = row.get('Validation steps', '')
-        notes = row.get('Notes:', '')
 
-        # Generating the content for the Markdown file
-        md_content = f"# {name}\n\n"
-
-        if description:
-            md_content += f"## Description\n{description}\n\n"
-
-        if specs:
-            md_content += f"## Specifications\n{specs}\n\n"
-
-        if validation_steps:
-            md_content += f"## Validation Steps\n{validation_steps}\n\n"
-
-        if notes:
-            md_content += f"## Notes\n{notes}\n\n"
+        # Generating the Markdown content for this row
+        md_content = generate_markdown_content(row)
 
         # Creating the file path
         file_path = os.path.join(target_folder, f"{parameter_id}.md")
