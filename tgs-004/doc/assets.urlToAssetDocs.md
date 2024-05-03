@@ -1,20 +1,20 @@
 # assets.urlToAssetDocs
 
-Table: Asset
+Table: ```Asset```
 
-Name: URL to asset docs
+Name: ```URL to asset docs```
 
-Parameter ID: assets.urlToAssetDocs
+Parameter ID: ```assets.urlToAssetDocs```
 
-Type: URL
+Type: ```URL```
 
 Specifications: 
 
-Description: What is the best official source for asset docs? 
+Description: ```What is the best official source for asset docs? ```
 
-Validation steps: Domain name (without https or www). Must be unique. 
+Validation steps: ```Domain name (without https or www). Must be unique. ```
 
-In DBD: True
+In DBD: ```True```
 
 Notes: 
 

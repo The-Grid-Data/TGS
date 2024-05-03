@@ -1,20 +1,20 @@
 # assets.assetStandard
 
-Table: Asset
+Table: ```Asset```
 
-Name: Asset Standard
+Name: ```Asset Standard```
 
-Parameter ID: assets.assetStandard
+Parameter ID: ```assets.assetStandard```
 
-Type: Link to another Table
+Type: ```Link to another Table```
 
 Specifications: 
 
-Description: Does this token follow an existing standard like ERC721, BRC20, ERC4337
+Description: ```Does this token follow an existing standard like ERC721, BRC20, ERC4337```
 
-Validation steps: Most commonly focused in the documentation of the project, it could also be figured out on chain by seeing which functions it has. 
+Validation steps: ```Most commonly focused in the documentation of the project, it could also be figured out on chain by seeing which functions it has. ```
 
-In DBD: True
+In DBD: ```True```
 
 Notes: 
 

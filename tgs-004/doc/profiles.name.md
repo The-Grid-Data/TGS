@@ -1,20 +1,20 @@
 # profiles.name
 
-Table: Profile
+Table: ```Profile```
 
-Name: Name
+Name: ```Name```
 
-Parameter ID: profiles.name
+Parameter ID: ```profiles.name```
 
-Type: Short Text
+Type: ```Short Text```
 
 Specifications: 
 
-Description: Full name of the Profile
+Description: ```Full name of the Profile```
 
-Validation steps: The full name of the Profile, as is used in their logo, across social media and documentation.
+Validation steps: ```The full name of the Profile, as is used in their logo, across social media and documentation.```
 
-In DBD: True
+In DBD: ```True```
 
-Notes: We use the term “Profile” because not every entity will be or have a project, product, or organization. those features of a Profile will be defined in other fields.
+Notes: ```We use the term “Profile” because not every entity will be or have a project, product, or organization. those features of a Profile will be defined in other fields.```
 

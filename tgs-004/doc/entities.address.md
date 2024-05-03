@@ -1,20 +1,20 @@
 # entities.address
 
-Table: Entity
+Table: ```Entity```
 
-Name: Address
+Name: ```Address```
 
-Parameter ID: entities.address
+Parameter ID: ```entities.address```
 
-Type: Short Text
+Type: ```Short Text```
 
 Specifications: 
 
-Description: Physical location where the Entity is registered
+Description: ```Physical location where the Entity is registered```
 
-Validation steps: The address includes the street name and street number. The address may include additional information such as the unit, suite, or floor. The address includes the city and postal code. The address may include the state or province if applicable.
+Validation steps: ```The address includes the street name and street number. The address may include additional information such as the unit, suite, or floor. The address includes the city and postal code. The address may include the state or province if applicable.```
 
-In DBD: True
+In DBD: ```True```
 
-Notes: May consider making into a better format?
+Notes: ```May consider making into a better format?```
 

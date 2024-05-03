@@ -1,20 +1,20 @@
 # assets.profileId
 
-Table: Asset
+Table: ```Asset```
 
-Name: Associated Profile
+Name: ```Associated Profile```
 
-Parameter ID: assets.profileId
+Parameter ID: ```assets.profileId```
 
-Type: Link to another Table
+Type: ```Link to another Table```
 
 Specifications: 
 
-Description: What Profile this Asset is associated with.
+Description: ```What Profile this Asset is associated with.```
 
 Validation steps: 
 
-In DBD: False
+In DBD: ```False```
 
 Notes: 
 

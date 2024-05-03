@@ -23,8 +23,9 @@ def generate_markdown_content(row):
 
     for col, val in row.items():
         if pd.isna(val):
-            val = ''  # Replace NaN with an empty string
-        md_content += f"{col}: {val}\n\n"
+            md_content += f"{col}: \n\n"
+        else:
+            md_content += f"{col}: ```{val}```\n\n"
 
     return md_content
 

@@ -1,20 +1,20 @@
 # entities.name
 
-Table: Entity
+Table: ```Entity```
 
-Name: Name
+Name: ```Name```
 
-Parameter ID: entities.name
+Parameter ID: ```entities.name```
 
-Type: Short Text
+Type: ```Short Text```
 
 Specifications: 
 
-Description: Name that is registered with the regulatory or governmental body
+Description: ```Name that is registered with the regulatory or governmental body```
 
-Validation steps: This Name can be confirmed with the regulatory body in the jurisdiction where the Entity is registered. It may also be confirmed in the Terms and Conditions on the Entity’s website.
+Validation steps: ```This Name can be confirmed with the regulatory body in the jurisdiction where the Entity is registered. It may also be confirmed in the Terms and Conditions on the Entity’s website.```
 
-In DBD: True
+In DBD: ```True```
 
 Notes: 
 

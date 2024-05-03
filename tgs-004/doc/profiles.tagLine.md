@@ -1,20 +1,20 @@
 # profiles.tagLine
 
-Table: Profile
+Table: ```Profile```
 
-Name: Tag line
+Name: ```Tag line```
 
-Parameter ID: profiles.tagLine
+Parameter ID: ```profiles.tagLine```
 
-Type: Long text
+Type: ```Long text```
 
 Specifications: 
 
-Description: A slogan or phrase that the Profile commonly uses in marketing materials.
+Description: ```A slogan or phrase that the Profile commonly uses in marketing materials.```
 
-Validation steps: This text may be found in the Profile’s social media account descriptions and on the Profile’s website.
+Validation steps: ```This text may be found in the Profile’s social media account descriptions and on the Profile’s website.```
 
-In DBD: True
+In DBD: ```True```
 
 Notes: 
 

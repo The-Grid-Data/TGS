@@ -1,20 +1,20 @@
 # socials.socialType
 
-Table: Socials
+Table: ```Socials```
 
-Name: Type of socials
+Name: ```Type of socials```
 
-Parameter ID: socials.socialType
+Parameter ID: ```socials.socialType```
 
-Type: Link to another Table
+Type: ```Link to another Table```
 
-Specifications: maybe put a reference to profile in here and create profiles for each social platform? TDB
+Specifications: ```maybe put a reference to profile in here and create profiles for each social platform? TDB```
 
-Description: This is what type of social media link is this: Discord, Farcaster, X, Facebook, Bluesky, Lens, Linkedin
+Description: ```This is what type of social media link is this: Discord, Farcaster, X, Facebook, Bluesky, Lens, Linkedin```
 
-Validation steps: The type of social media is based on the URL.
+Validation steps: ```The type of social media is based on the URL.```
 
-In DBD: True
+In DBD: ```True```
 
 Notes: 
 

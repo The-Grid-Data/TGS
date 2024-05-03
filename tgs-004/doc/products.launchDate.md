@@ -1,20 +1,20 @@
 # products.launchDate
 
-Table: Products
+Table: ```Products```
 
-Name: Launch Date
+Name: ```Launch Date```
 
-Parameter ID: products.launchDate
+Parameter ID: ```products.launchDate```
 
-Type: Date
+Type: ```Date```
 
 Specifications: 
 
-Description: When this Product was originally released
+Description: ```When this Product was originally released```
 
-Validation steps: The date may be found on the Profile’s social media posts, or in press releases and announcements on the Blog. Must include year, and preferably the month. May include the day.
+Validation steps: ```The date may be found on the Profile’s social media posts, or in press releases and announcements on the Blog. Must include year, and preferably the month. May include the day.```
 
-In DBD: True
+In DBD: ```True```
 
 Notes: 
 

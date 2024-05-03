@@ -1,20 +1,20 @@
 # profiles.urlDocumentation
 
-Table: Profile
+Table: ```Profile```
 
-Name: Documentation URL
+Name: ```Documentation URL```
 
-Parameter ID: profiles.urlDocumentation
+Parameter ID: ```profiles.urlDocumentation```
 
-Type: URL
+Type: ```URL```
 
 Specifications: 
 
-Description: Link to the root of the documentation of a profile
+Description: ```Link to the root of the documentation of a profile```
 
-Validation steps: The URL will likely have “docs” or “documentation” in the address. The site will likely have sections with titles such as “Getting Started”, “Governance”, “Wallets”, “Transactions”, “Explorer”, “Glossary” and “Terminology”. The site may also have assets and sources from gitbook.com . 
+Validation steps: ```The URL will likely have “docs” or “documentation” in the address. The site will likely have sections with titles such as “Getting Started”, “Governance”, “Wallets”, “Transactions”, “Explorer”, “Glossary” and “Terminology”. The site may also have assets and sources from gitbook.com . ```
 
-In DBD: True
+In DBD: ```True```
 
 Notes: 
 

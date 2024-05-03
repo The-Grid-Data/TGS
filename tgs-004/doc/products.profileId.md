@@ -1,20 +1,20 @@
 # products.profileId
 
-Table: Products
+Table: ```Products```
 
-Name: Profile
+Name: ```Profile```
 
-Parameter ID: products.profileId
+Parameter ID: ```products.profileId```
 
-Type: Link to another Table
+Type: ```Link to another Table```
 
 Specifications: 
 
-Description: What Profile this product is associated with.
+Description: ```What Profile this product is associated with.```
 
 Validation steps: 
 
-In DBD: True
+In DBD: ```True```
 
 Notes: 
 

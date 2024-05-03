@@ -1,20 +1,20 @@
 # entities.leiNumber
 
-Table: Entity
+Table: ```Entity```
 
-Name: LEI Code
+Name: ```LEI Code```
 
-Parameter ID: entities.leiNumber
+Parameter ID: ```entities.leiNumber```
 
-Type: Short Text
+Type: ```Short Text```
 
 Specifications: 
 
-Description: What is the LEI code linked to their GLEIF profile
+Description: ```What is the LEI code linked to their GLEIF profile```
 
-Validation steps: This information can be found on the GLEIF website
+Validation steps: ```This information can be found on the GLEIF website```
 
-In DBD: True
+In DBD: ```True```
 
 Notes: 
 

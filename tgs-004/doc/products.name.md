@@ -1,20 +1,20 @@
 # products.name
 
-Table: Products
+Table: ```Products```
 
-Name: Name
+Name: ```Name```
 
-Parameter ID: products.name
+Parameter ID: ```products.name```
 
-Type: Short Text
+Type: ```Short Text```
 
 Specifications: 
 
-Description: What this service or offering is called
+Description: ```What this service or offering is called```
 
-Validation steps: A Product is something that a customer of the Profile can interact with (e.g., an app). It is not an Asset.
+Validation steps: ```A Product is something that a customer of the Profile can interact with (e.g., an app). It is not an Asset.```
 
-In DBD: True
+In DBD: ```True```
 
 Notes: 
 

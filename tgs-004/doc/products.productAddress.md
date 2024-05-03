@@ -1,20 +1,20 @@
 # products.productAddress
 
-Table: Products
+Table: ```Products```
 
-Name: Address
+Name: ```Address```
 
-Parameter ID: products.productAddress
+Parameter ID: ```products.productAddress```
 
-Type: Long text
+Type: ```Long text```
 
 Specifications: 
 
-Description: What is the main smart contract address of this product, if any?
+Description: ```What is the main smart contract address of this product, if any?```
 
-Validation steps: This text is most likely a sequence of numbers and letters, with no spaces in between.
+Validation steps: ```This text is most likely a sequence of numbers and letters, with no spaces in between.```
 
-In DBD: True
+In DBD: ```True```
 
 Notes: 
 

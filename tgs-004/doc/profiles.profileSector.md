@@ -1,20 +1,20 @@
 # profiles.profileSector
 
-Table: Profile
+Table: ```Profile```
 
-Name: Sector
+Name: ```Sector```
 
-Parameter ID: profiles.profileSector
+Parameter ID: ```profiles.profileSector```
 
-Type: Link to another Table
+Type: ```Link to another Table```
 
-Specifications: Profile - Sector / Subsector
+Specifications: ```Profile - Sector / Subsector```
 
-Description: The main industry or client type that this Profile serves. Acts as a high level category of a Profile. 
+Description: ```The main industry or client type that this Profile serves. Acts as a high level category of a Profile. ```
 
-Validation steps: Sector may be determined by the type of conferences or events the Profile attends. Sector may also be determined by the regulations the Profile is subject to follow.
+Validation steps: ```Sector may be determined by the type of conferences or events the Profile attends. Sector may also be determined by the regulations the Profile is subject to follow.```
 
-In DBD: True
+In DBD: ```True```
 
-Notes: Could be use case VS industry.
+Notes: ```Could be use case VS industry.```
 
