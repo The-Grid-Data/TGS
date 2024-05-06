@@ -18,8 +18,7 @@ jobs:
       with:
         go-version: 1.22
 
-    - name: Navigate to project directory
-      run: cd tgs-004/go/
-
     - name: Run tests
-      run: go test ./...
+      run: |
+        cd tgs-004/go/
+        go test ./...
