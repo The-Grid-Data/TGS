@@ -9,8 +9,10 @@ import (
 func Test_TGS_004_fetch(t *testing.T) {
 	indexFileURL := "https://github.com/The-Grid-Data/TGS/blob/main/tgs-004/doc/index.md"
 
+	var err error
+
 	//t.Logf("Fetching %v", indexFileURL)
-	//err := test(indexFileURL)
+	//err = test(indexFileURL)
 	//
 	//if err != nil {
 	//	t.Fatalf("Fetch failed: %v", err)
@@ -22,7 +24,7 @@ func Test_TGS_004_fetch(t *testing.T) {
 	}()
 
 	t.Logf("Testing locally")
-	err := test(indexFileURL)
+	err = test(indexFileURL)
 	if err != nil {
 		t.Fatalf("Parsing failed: %v", err)
 	}
