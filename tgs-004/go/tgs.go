@@ -54,6 +54,16 @@ func MapToParameterData(data map[string]string) (*ParameterData, error) {
 // FetchFileContent makes an HTTP GET request to the specified URL and returns the response body as a string.
 // It provides detailed errors on failure, helping with debugging and error tracking.
 func FetchFileContent(url string) (string, error) {
+
+	if READ_TGS_PARAMS_LOCALLY {
+
+		discard := "https://raw.githubusercontent.com/The-Grid-Data/TGS/main/" // tgs-004/doc/index.md
+		postfix := strings.TrimPrefix(url, discard)                            // tgs-004/doc/index.md
+
+		path := "../../" + postfix
+		return FetchFileContentLocally(path)
+	}
+
 	resp, err := http.Get(url)
 	if err != nil {
 		// Include the URL in the error message for clarity on what was being requested
@@ -74,6 +84,20 @@ func FetchFileContent(url string) (string, error) {
 	}
 
 	return string(body), nil
+}
+
+func FetchFileContentLocally(filePath string) (string, error) {
+	// Read the contents of the file
+	data, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		// Provide details about the error that occurred while reading the file
+		return "", fmt.Errorf("failed to read file '%s': %v", filePath, err)
+	}
+
+	// Convert byte slice to string
+	content := string(data)
+
+	return content, nil
 }
 
 func ExtractParameterIDs(indexFileURL string) ([]string, error) {
@@ -114,6 +138,8 @@ func FetchMarkdownFileByID(repoBaseURL, parameterID string) (map[string]string, 
 	}
 	return dataDict, nil
 }
+
+var READ_TGS_PARAMS_LOCALLY = false
 
 func FetchAllParameters(indexFileURL string) (map[string]map[string]string, error) {
 	repoBaseURL := strings.Join(strings.Split(indexFileURL, "/")[:len(strings.Split(indexFileURL, "/"))-1], "/")

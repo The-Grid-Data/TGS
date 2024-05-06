@@ -6,17 +6,38 @@ import (
 	"testing"
 )
 
-func TestTGS_004(t *testing.T) {
+func Test_TGS_004_fetch(t *testing.T) {
 	indexFileURL := "https://github.com/The-Grid-Data/TGS/blob/main/tgs-004/doc/index.md"
+
+	t.Logf("Fetching %v", indexFileURL)
+	err := test(indexFileURL)
+
+	if err != nil {
+		t.Fatalf("Fetch failed: %v", err)
+	}
+
+	READ_TGS_PARAMS_LOCALLY = true
+	defer func() {
+		READ_TGS_PARAMS_LOCALLY = false
+	}()
+
+	t.Logf("Testing locally")
+	err = test(indexFileURL)
+	if err != nil {
+		t.Fatalf("Parsing failed: %v", err)
+	}
+}
+
+func test(indexFileURL string) error {
 	allParameters, err := FetchAllParameters(indexFileURL)
 	if err != nil {
-		fmt.Println("Error:", err)
-		return
+		return err
 	}
 	jsonData, err := json.MarshalIndent(allParameters, "", "    ") // Indent for pretty print
 	if err != nil {
-		fmt.Println("Error marshaling to JSON:", err)
-		return
+		return err
 	}
 	fmt.Println(string(jsonData))
+
+	return nil
 }
