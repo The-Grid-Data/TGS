@@ -1,6 +1,6 @@
 # assets.icon
 
-Table: ```Asset
+Table: ```Asset```
 
 Name: ```Icon```
 
