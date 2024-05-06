@@ -1,56 +1,56 @@
-import json
 import requests
 import re
+import json
 
 def fetch_file_content(url):
     """
     Fetch the content of a file from a given URL.
     """
     response = requests.get(url)
-    response.raise_for_status()  # Will raise an HTTPError for bad requests (4XX, 5XX)
+    response.raise_for_status()  # Raises HTTPError for bad requests (4XX, 5XX)
     return response.text
 
-def parse_markdown_content(content):
+def extract_parameter_ids(index_file_url):
     """
-    Parse the content of a Markdown file and convert it into a dictionary.
+    Read the index.md from a GitHub repository URL and return a list of parameter IDs.
     """
-    parameter_id = content.split('\n')[0].strip('# ').strip()
-    data_dict = {'Parameter ID': parameter_id}
+    raw_index_url = index_file_url.replace('github.com', 'raw.githubusercontent.com').replace('blob/', '')
+    index_content = fetch_file_content(raw_index_url)
+    parameter_ids = re.findall(r"\((.*?).md\)", index_content)
+    return parameter_ids
 
-    content_lines = content.split('\n')
-    for line in content_lines:
+def fetch_markdown_file_by_id(repo_base_url, parameter_id):
+    """
+    Fetch and parse a Markdown file from a GitHub repository by parameter ID.
+    """
+    md_file_url = f"{repo_base_url}/{parameter_id}.md"
+    md_content = fetch_file_content(md_file_url)
+    data_dict = {'Parameter ID': parameter_id}
+    lines = md_content.split('\n')
+    for line in lines:
         match = re.match(r"^(.*?): ```(.*?)```$", line)
         if match:
             key = match.group(1).strip()
             value = match.group(2).strip()
             data_dict[key] = value
-
     return data_dict
 
-def read_markdown_files_from_github(repo_base_url, index_file_url):
+def fetch_all_parameters(index_file_url):
     """
-    Read all Markdown files listed in the index.md from a GitHub repository and return a dictionary of dictionaries.
+    Fetch all parameters from the repository using the index.md file.
     """
-    # Fetch the index.md content
-    index_content = fetch_file_content(index_file_url)
-    all_data = {}
-
-    # Extract Markdown file links from the index content
-    lines = index_content.split('\n')
-    for line in lines:
-        match = re.search(r"\((.*?)\.md\)", line)
-        if match:
-            md_file_url = f"{repo_base_url}/{match.group(1)}.md"
-            md_content = fetch_file_content(md_file_url)
-            file_data = parse_markdown_content(md_content)
-            param_id = file_data.get('Parameter ID')
-            if param_id:
-                all_data[param_id] = file_data
-
-    return all_data
+    repo_base_url = '/'.join(index_file_url.split('/')[:-1]).replace('blob/', '').replace('github.com', 'raw.githubusercontent.com')
+    parameter_ids = extract_parameter_ids(index_file_url)
+    all_parameters = {}
+    for parameter_id in parameter_ids:
+        all_parameters[parameter_id] = fetch_markdown_file_by_id(repo_base_url, parameter_id)
+    return all_parameters
 
 # Example usage:
-repo_base_url = 'https://raw.githubusercontent.com/The-Grid-Data/TGS/main/tgs-004/doc'
-index_file_url = 'https://github.com/The-Grid-Data/TGS/blob/main/tgs-004/doc/index.md'.replace('github.com', 'raw.githubusercontent.com').replace('blob/', '')
-markdown_data_dict = read_markdown_files_from_github(repo_base_url, index_file_url)
-print(json.dumps(markdown_data_dict, indent=4))
+index_file_url = 'https://github.com/The-Grid-Data/TGS/blob/main/tgs-004/doc/index.md'
+repo_base_url = '/'.join(index_file_url.split('/')[:-1]).replace('blob/', '').replace('github.com',
+                                                                                      'raw.githubusercontent.com')
+
+all_parameters = fetch_all_parameters(index_file_url)
+print(json.dumps(all_parameters, indent=4))
+print(repo_base_url)
