@@ -4,7 +4,7 @@ Table: ```Asset```
 
 Name: ```Icon```
 
-Parameter ID: ```assets.icon```
+Parameter ID: ```assets.icon
 
 Type: ```Image```
 
