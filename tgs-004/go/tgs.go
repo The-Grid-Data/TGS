@@ -19,6 +19,29 @@ type ParameterData struct {
 	Notes           string `json:"Notes"`
 }
 
+// FetchParameterData retrieves parameter data by ID, providing detailed errors.
+func FetchParameterData(id, indexFileURL string) (*ParameterData, error) {
+	// Generate the base URL for the repository to fetch raw Markdown files
+	repoBaseURL := strings.Join(strings.Split(indexFileURL, "/")[:len(strings.Split(indexFileURL, "/"))-1], "/")
+	repoBaseURL = strings.ReplaceAll(strings.ReplaceAll(repoBaseURL, "blob/", ""), "github.com", "raw.githubusercontent.com")
+
+	// Fetch the Markdown content by ID
+	def, err := FetchMarkdownFileByID(repoBaseURL, id)
+	if err != nil {
+		// Wrap the error with detailed context
+		return nil, fmt.Errorf("failed to fetch markdown file by ID '%s' from URL '%s': %w", id, repoBaseURL, err)
+	}
+
+	// Convert the fetched markdown map to a ParameterData struct
+	paramData, err := MapToParameterData(def)
+	if err != nil {
+		// Wrap the error with detailed context
+		return nil, fmt.Errorf("failed to map fetched data to ParameterData struct for ID '%s': %w", id, err)
+	}
+
+	return paramData, nil
+}
+
 // MapToParameterData converts a map of strings to a ParameterData struct and checks for required fields.
 func MapToParameterData(data map[string]string) (*ParameterData, error) {
 	// Check for mandatory fields
@@ -141,7 +164,7 @@ func FetchMarkdownFileByID(repoBaseURL, parameterID string) (map[string]string, 
 
 var READ_TGS_PARAMS_LOCALLY = false
 
-func FetchAllParameters(indexFileURL string) (map[string]map[string]string, error) {
+func FetchAllParameters(indexFileURL string) (map[string]*ParameterData, error) {
 	repoBaseURL := strings.Join(strings.Split(indexFileURL, "/")[:len(strings.Split(indexFileURL, "/"))-1], "/")
 	repoBaseURL = strings.ReplaceAll(strings.ReplaceAll(repoBaseURL, "blob/", ""), "github.com", "raw.githubusercontent.com")
 	parameterIDs, err := ExtractParameterIDs(indexFileURL)
@@ -149,9 +172,9 @@ func FetchAllParameters(indexFileURL string) (map[string]map[string]string, erro
 		return nil, err
 	}
 
-	allParameters := make(map[string]map[string]string)
+	allParameters := make(map[string]*ParameterData)
 	for _, parameterID := range parameterIDs {
-		paramData, err := FetchMarkdownFileByID(repoBaseURL, parameterID)
+		paramData, err := FetchParameterData(parameterID, indexFileURL)
 		if err != nil {
 			return nil, err
 		}
