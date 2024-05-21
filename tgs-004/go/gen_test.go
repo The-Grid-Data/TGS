@@ -1,92 +1,52 @@
 package tgs_004
 
-//
-//import (
-//	"bufio"
-//	"encoding/csv"
-//	"fmt"
-//	"os"
-//	"strings"
-//	"testing"
-//)
-//
-//// Simplify and sanitize string to be used in Go code
-//func sanitize(str string) string {
-//	return strings.ReplaceAll(str, `"`, `\"`)
-//}
-//
-//// Escape backticks in strings to avoid syntax errors in Go
-//func escapeBackticks(str string) string {
-//	return strings.ReplaceAll(str, "`", "` + \"`\" + `")
-//}
-//func TestHelloName(t *testing.T) {
-//	csvFile, err := os.Open("tgs.csv")
-//	if err != nil {
-//		fmt.Println("Error opening CSV file:", err)
-//		return
-//	}
-//	defer csvFile.Close()
-//
-//	reader := csv.NewReader(bufio.NewReader(csvFile))
-//	// Assuming the first row is headers
-//	_, err = reader.Read()
-//	if err != nil {
-//		fmt.Println("Error reading CSV header:", err)
-//		return
-//	}
-//
-//	// Open the Go file for writing
-//	goFile, err := os.Create("definitions.go")
-//	if err != nil {
-//		fmt.Println("Error creating definitions.go:", err)
-//		return
-//	}
-//	defer goFile.Close()
-//
-//	// Write the package declaration and initial part of the map
-//	_, err = goFile.WriteString(
-//		`package tgs_004
-//
-//var TGS_004 = map[string]ParamDefinition{
-//`)
-//	if err != nil {
-//		fmt.Println("Error writing to definitions.go:", err)
-//		return
-//	}
-//
-//	// Process each row of the CSV
-//	for {
-//		record, err := reader.Read()
-//		if err != nil {
-//			if err == csv.ErrFieldCount || err == csv.ErrBareQuote || err == csv.ErrQuote {
-//				fmt.Println("Warning: Skipping malformed CSV row:", err)
-//				continue
-//			}
-//			break // End of file or an error occurred
-//		}
-//
-//		id := escapeBackticks(record[2])
-//
-//		description := escapeBackticks(record[4])
-//		validation := escapeBackticks(record[5])
-//		isLinkToAnotherTable := strings.ToLower(record[6]) == "true"
-//
-//		// Write the map entry for each row using backticks for multiline support
-//		entry := fmt.Sprintf("\t`%s`: {\n\t\tID: `%s`,\n\t\tDescription: `%s`,\n\t\tValidation: `%s`,\n\t\tIsLinkToAnotherTable: %t,\n\t},\n",
-//			id, id, description, validation, isLinkToAnotherTable)
-//		_, err = goFile.WriteString(entry)
-//		if err != nil {
-//			fmt.Println("Error writing entry to definitions.go:", err)
-//			return
-//		}
-//	}
-//
-//	// Close the map and file
-//	_, err = goFile.WriteString("}\n")
-//	if err != nil {
-//		fmt.Println("Error finalizing definitions.go:", err)
-//		return
-//	}
-//
-//	fmt.Println("definitions.go generated successfully.")
-//}
+import (
+	"database/sql"
+	"encoding/csv"
+	"fmt"
+	"log"
+	"os"
+	"testing"
+
+	_ "github.com/go-sql-driver/mysql"
+)
+
+func TestUploadCountries(t *testing.T) {
+	// Open the CSV file
+	csvFile, err := os.Open("countries.csv")
+	if err != nil {
+		log.Fatalf("Failed to open CSV file: %v", err)
+	}
+	defer csvFile.Close()
+
+	// Read CSV data into a slice of records
+	reader := csv.NewReader(csvFile)
+	records, err := reader.ReadAll()
+	if err != nil {
+		log.Fatalf("Failed to parse CSV file: %v", err)
+	}
+
+	// Connect to the MySQL database
+	db, err := sql.Open("mysql", credentials)
+	if err != nil {
+		log.Fatalf("Failed to connect to database: %v", err)
+	}
+	defer db.Close()
+
+	// Prepare SQL statement for inserting data
+	stmt, err := db.Prepare("INSERT INTO countries (Name, Code) VALUES (?, ?)")
+	if err != nil {
+		log.Fatalf("Failed to prepare statement: %v", err)
+	}
+	defer stmt.Close()
+
+	// Skip the header row and iterate over the records
+	for _, record := range records[1:] {
+		_, err = stmt.Exec(record[0], record[1])
+		if err != nil {
+			log.Printf("Failed to execute statement: %v", err)
+		}
+	}
+
+	fmt.Println("Data uploaded successfully")
+}
