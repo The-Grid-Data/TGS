@@ -94,4 +94,5 @@ def generate_markdown_files(csv_file, target_folder):
 # Make sure to replace 'tgs.csv' with the path to your actual CSV file.
 csv_file = 'tgs.csv'
 target_folder = '../doc/'
+target_folder = '../../tgs-005/doc/'
 generate_markdown_files(csv_file, target_folder)
