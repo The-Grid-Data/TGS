@@ -138,6 +138,10 @@ func ExtractParameterIDs(indexFileURL string) ([]string, error) {
 	}
 	return parameterIDs, nil
 }
+
+var READ_TGS_PARAMS_LOCALLY = false
+
+// fetchMarkdownFileByID fetches and parses a Markdown file from a GitHub repository by parameter ID.
 func FetchMarkdownFileByID(repoBaseURL, parameterID string) (map[string]string, error) {
 	mdFileURL := fmt.Sprintf("%s/%s.md", repoBaseURL, parameterID)
 	mdContent, err := FetchFileContent(mdFileURL)
@@ -146,23 +150,31 @@ func FetchMarkdownFileByID(repoBaseURL, parameterID string) (map[string]string, 
 	}
 
 	dataDict := make(map[string]string)
-	//dataDict["Parameter ID"] = parameterID
+	var currentKey string
+	var contentBuffer []string
+	keyStartRegex := regexp.MustCompile("^(.*?): ```")
 
-	// Adjust the regex pattern to match lines with possible multiline values enclosed in triple backticks
-	re := regexp.MustCompile("^([^:]+?): ```\\s*([\\s\\S]*?)\\s*```$")
-	lines := strings.Split(mdContent, "\n")
-	for _, line := range lines {
-		matches := re.FindStringSubmatch(line)
-		if matches != nil {
-			key := strings.TrimSpace(matches[1])
-			value := strings.TrimSpace(matches[2])
-			dataDict[key] = value
+	for _, line := range strings.Split(mdContent, "\n") {
+		if keyStart := keyStartRegex.FindStringSubmatch(line); keyStart != nil {
+			if currentKey != "" {
+				dataDict[currentKey] = strings.Trim(strings.Join(contentBuffer, ""), "```")
+			}
+			currentKey = strings.TrimSpace(keyStart[1])
+			contentBuffer = []string{}
+			if strings.Contains(line, "```") {
+				contentBuffer = append(contentBuffer, strings.Split(line, "```")[1])
+			}
+		} else if currentKey != "" {
+			contentBuffer = append(contentBuffer, line)
 		}
 	}
+
+	if currentKey != "" && len(contentBuffer) > 0 {
+		dataDict[currentKey] = strings.Trim(strings.Join(contentBuffer, ""), "```")
+	}
+
 	return dataDict, nil
 }
-
-var READ_TGS_PARAMS_LOCALLY = false
 
 func FetchAllParameters(indexFileURL string) (map[string]*ParameterData, error) {
 	repoBaseURL := strings.Join(strings.Split(indexFileURL, "/")[:len(strings.Split(indexFileURL, "/"))-1], "/")
