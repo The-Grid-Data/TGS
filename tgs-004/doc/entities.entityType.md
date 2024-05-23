@@ -10,11 +10,13 @@ Type: ```Link to another Table```
 
 Specifications: ```Entity - Type```
 
-Description: ```How is this Entity registered with the regulatory or governmental body?```
+Description: ```The legal structure or registration category of the Entity (e.g. LLC, Foundation, Corporation). Refer to the standardized list of entity types.```
 
-Validation steps: ```This information may be found with the Entity’s regulatory body, such as the Chamber of Commerce or Secretary of State. This information may also be found in the Entity’s or Profile’s Terms and Conditions.```
+Validation steps: ```1. Check the Entity's registration documents or regulatory filings to confirm their legal structure.
+2. Review the Entity's website or Terms and Conditions page for information on their legal status.
+3. Ensure the selected type aligns with the standardized list of entity types.```
 
 In DBD: ```True```
 
-Notes: ```possible types of legal entities: Foundation, Company, Government```
+Notes:: ```possible types of legal entities: Foundation, Company, Government```
 

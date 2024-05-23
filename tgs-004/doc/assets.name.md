@@ -10,11 +10,13 @@ Type: ```Short Text```
 
 Specifications: 
 
-Description: ```What to call the item or token that represents value, and can be traded or sold```
+Description: ```The official name of the Asset as used in its branding, marketing, and trading materials.```
 
-Validation steps: ```The name may be different from the Ticker symbol (e.g. Ether is the name, ETH is the ticker).```
+Validation steps: ```1. Check the Asset's website, whitepaper, and documentation for consistency in the name used.
+2. Confirm the name is not abbreviated or truncated, unless commonly used by the Asset's issuer.
+3. Verify that the name is unique and not easily confused with other Assets or cryptocurrencies.```
 
 In DBD: ```True```
 
-Notes: 
+Notes:: 
 

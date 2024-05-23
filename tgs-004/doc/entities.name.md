@@ -10,11 +10,13 @@ Type: ```Short Text```
 
 Specifications: 
 
-Description: ```Name that is registered with the regulatory or governmental body```
+Description: ```The legal name of the Entity as registered with the relevant regulatory bodies or government agencies.```
 
-Validation steps: ```This Name can be confirmed with the regulatory body in the jurisdiction where the Entity is registered. It may also be confirmed in the Terms and Conditions on the Entity’s website.```
+Validation steps: ```1. Check the Entity's registration documents, regulatory filings, or other official records for the legal name.
+2. Confirm the name is complete and matches across all official sources.
+3. Verify that the name is distinct from any trade names or brands associated with the Entity.```
 
 In DBD: ```True```
 
-Notes: 
+Notes:: 
 

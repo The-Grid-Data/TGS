@@ -10,11 +10,13 @@ Type: ```Short Text```
 
 Specifications: 
 
-Description: ```Physical location where the Entity is registered```
+Description: ```The registered physical address of the Entity, including street, city, state/province (if applicable), and postal code.```
 
-Validation steps: ```The address includes the street name and street number. The address may include additional information such as the unit, suite, or floor. The address includes the city and postal code. The address may include the state or province if applicable.```
+Validation steps: ```1. Check the Entity's registration documents or regulatory filings for their official registered address.
+2. Confirm the address is complete, including street, city, state/province (if applicable), and postal code.
+3. Validate the address using Google Maps or similar services to ensure it is a real location.```
 
 In DBD: ```True```
 
-Notes: ```May consider making into a better format?```
+Notes:: ```May consider making into a better format?```
 

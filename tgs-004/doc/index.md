@@ -26,8 +26,9 @@
 - [products.isMainProduct](products.isMainProduct.md)
 - [products.launchDate](products.launchDate.md)
 - [products.deployedOn](products.deployedOn.md)
-- [products.assetSupport](products.assetSupport.md)
+- [products.mainAsset](products.mainAsset.md)
 - [products.profileId](products.profileId.md)
+- [products.productSupports](products.productSupports.md)
 # entities
 
 - [entities.name](entities.name.md)

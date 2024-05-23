@@ -10,11 +10,13 @@ Type: ```URL```
 
 Specifications: 
 
-Description: ```Link to the most recent copy of the whitepaper```
+Description: ```The URL of the Profile's most recent whitepaper or technical document outlining its technology, roadmap, and token economics. Use the root domain without "www" or "https://".```
 
-Validation steps: ```The whitepaper is often a PDF, but it may instead be in Notion or Gitbook. It provides written details of the problem, solution, and possible technical architecture that the Profile provides.```
+Validation steps: ```1. Check the Profile's website, blog, or documentation for links to its whitepaper or technical documents.
+2. Confirm the URL is the root domain and does not include "www" or "https://".
+3. Validate that the URL leads to a downloadable or web-hosted document in a standard format (e.g., PDF, HTML).```
 
 In DBD: ```True```
 
-Notes: ```This could be a copy that we host? It may also be versioned!```
+Notes:: ```This could be a copy that we host? It may also be versioned!```
 

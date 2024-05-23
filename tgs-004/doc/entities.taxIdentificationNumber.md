@@ -10,11 +10,13 @@ Type: ```Short Text```
 
 Specifications: 
 
-Description: ```The unique identifier assigned to the Entity by the tax authority```
+Description: ```The unique tax identification number assigned to the Entity by the relevant tax authority, if applicable.```
 
-Validation steps: ```This information may be found with the tax authority where the Entity is registered (e.g. Belastingdienst, IRS). This information may also be found in the Entity’s or Profile’s Terms and Conditions.```
+Validation steps: ```1. Check the Entity's tax documents, regulatory filings, or public records to obtain its official tax identification number.
+2. Confirm the tax identification number is accurate and matches the format used by the relevant tax authority.
+3. If the Entity does not have a tax identification number, leave this field blank or use a default value to indicate its absence.```
 
 In DBD: ```True```
 
-Notes: 
+Notes:: 
 

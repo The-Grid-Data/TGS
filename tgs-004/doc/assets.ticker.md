@@ -10,11 +10,13 @@ Type: ```Short Text```
 
 Specifications: 
 
-Description: ```How the Asset is identified and listed on exchanges```
+Description: ```The unique trading symbol used to represent the Asset on exchanges and trading platforms. Use only capital letters and numbers.```
 
-Validation steps: ```Do not include any symbols. Only use numbers and capital letters.```
+Validation steps: ```1. Check the Asset's page on major crypto data aggregators (e.g. CoinMarketCap, CoinGecko) for the ticker symbol.
+2. Confirm the ticker symbol is consistently used across exchanges where the Asset is traded.
+3. Ensure the ticker symbol contains only capital letters and numbers, without any spaces or special characters.```
 
 In DBD: ```True```
 
-Notes: 
+Notes:: 
 

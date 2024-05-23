@@ -10,11 +10,13 @@ Type: ```Long text```
 
 Specifications: 
 
-Description: ```What is the smart contract address of the asset issuer? Aka where did this asset come from?```
+Description: ```The unique smart contract address of the Asset on the blockchain it is deployed on. Use a standard blockchain explorer to validate the address.```
 
-Validation steps: ```This information should be found via block explorer and ideally is checked against the documentation from the project. Assets should only be deployed on one address per blockchain. ```
+Validation steps: ```1. Check the Asset's official documentation or website for the smart contract address.
+2. Use a reputable blockchain explorer (e.g. Etherscan for Ethereum) to confirm the address exists and corresponds to the Asset.
+3. Ensure the address format matches the standards of the specific blockchain (e.g. 0x prefix for Ethereum).```
 
 In DBD: ```True```
 
-Notes: ```This may be multiple? ```
+Notes:: ```This may be multiple? ```
 

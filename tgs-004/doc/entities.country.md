@@ -10,11 +10,13 @@ Type: ```Single Option```
 
 Specifications: 
 
-Description: ```Name of the Jurisdiction the Entity is registered in```
+Description: ```The country in which the Entity is legally registered or incorporated, using the ISO 3166-1 alpha-2 country code format.```
 
-Validation steps: ```This information may be found with the Entity’s regulatory body, such as the Chamber of Commerce or Secretary of State. This information may also be found in the Entity’s or Profile’s Terms and Conditions.```
+Validation steps: ```1. Check the Entity's registration documents, regulatory filings, or public records to determine its country of registration or incorporation.
+2. Confirm the country name is accurate and up-to-date, reflecting any changes in the Entity's legal jurisdiction.
+3. Use the ISO 3166-1 alpha-2 country code format to ensure consistency and compatibility with international standards.```
 
 In DBD: ```True```
 
-Notes: 
+Notes:: 
 

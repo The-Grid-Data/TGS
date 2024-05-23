@@ -10,11 +10,11 @@ Type: ```Link to another Table```
 
 Specifications: 
 
-Description: ```What Profile this product is associated with.```
+Description: ```A reference to the Profile associated with the product, using the Profile's unique identifier or name.```
 
 Validation steps: 
 
 In DBD: ```True```
 
-Notes: 
+Notes:: 
 

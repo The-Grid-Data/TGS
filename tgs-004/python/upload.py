@@ -12,42 +12,43 @@ def load_data(csv_path):
     # Load data from CSV
     data = pd.read_csv(csv_path)
 
+    # Making sure data columns match the database columns, including renaming if necessary
+    data.columns = data.columns.str.replace(" ", "_").str.replace(":", "")  # Adjust column names to match DB columns
+
+    # Check for columns that need type conversion, particularly boolean/tinyint types
+    if 'In_DBD' in data.columns:
+        data['In_DBD'] = data['In_DBD'].astype(int)
+
     # Connect to the MySQL database
     try:
-        conn = mysql.connector.connect(**db_config)
-        if conn.is_connected():
-            print('Connected to MySQL database')
+        with mysql.connector.connect(**db_config) as conn:
+            if conn.is_connected():
+                print('Connected to MySQL database')
 
-            cursor = conn.cursor()
+                with conn.cursor() as cursor:
+                    # Disable autocommit for transaction
+                    conn.autocommit = False
 
-            # Disable autocommit for transaction
-            conn.autocommit = False
+                    # Create a list of tuples from the dataframe values
+                    tuples = [tuple(x) for x in data.to_numpy()]
 
-            # Create a list of tuples from the dataframe values
-            tuples = [tuple(x) for x in data.to_numpy()]
+                    # Comma-separated dataframe columns
+                    cols = ', '.join(f"`{col}`" for col in data.columns)
 
-            # Comma-separated dataframe columns, adjusting for SQL-compatible names
-            cols = ', '.join('`{0}`'.format(col.replace(" ", "_").replace(":", "")) for col in data.columns)  # Handling space in column names
+                    # Constructing the query string, with placeholders
+                    query = f"INSERT INTO `DbTGS` ({cols}) VALUES ({', '.join(['%s'] * len(data.columns))})"
 
-            # Constructing the query string
-            query = "INSERT INTO DbTGS ({cols}) VALUES (%s{placeholders})".format(
-                cols=cols,
-                placeholders=', %s' * (len(data.columns) - 1))
-
-            # Execute the query as a single transaction
-            cursor.executemany(query, tuples)
-            conn.commit()
-            print("Data inserted successfully")
-        else:
-            print("Connection failed")
+                    # Execute the query as a single transaction
+                    cursor.executemany(query, tuples)
+                    conn.commit()
+                    print("Data inserted successfully")
     except Error as e:
         print(f"Error: {e}")
-        # Rollback in case of error
-        conn.rollback()
-    finally:
         if conn.is_connected():
-            cursor.close()
-            conn.close()
+            conn.rollback()
+    finally:
+        # The connection is auto-closed by the 'with' statement, but we ensure it if needed
+        if conn.is_connected():
             print('Connection closed.')
 
 # Execute the function

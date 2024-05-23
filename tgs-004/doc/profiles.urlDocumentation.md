@@ -10,11 +10,13 @@ Type: ```URL```
 
 Specifications: 
 
-Description: ```Link to the root of the documentation of a profile```
+Description: ```The URL of the Profile's primary technical documentation or knowledge base. Use the root domain without "www" or "https://".```
 
-Validation steps: ```The URL will likely have “docs” or “documentation” in the address. The site will likely have sections with titles such as “Getting Started”, “Governance”, “Wallets”, “Transactions”, “Explorer”, “Glossary” and “Terminology”. The site may also have assets and sources from gitbook.com . ```
+Validation steps: ```1. Check the Profile's website for a dedicated documentation, guides, or support section.
+2. Confirm the URL is the root domain and does not include "www" or "https://".
+3. Validate that the URL leads to an active documentation page related to the Profile's products or services.```
 
 In DBD: ```True```
 
-Notes: 
+Notes:: 
 

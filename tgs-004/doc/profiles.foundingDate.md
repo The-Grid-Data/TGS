@@ -10,11 +10,13 @@ Type: ```Date```
 
 Specifications: 
 
-Description: ```Date when Profile publicised itself or registered with a regulatory body. Can usually be shortened to Month and Year. ```
+Description: ```The date when the Profile was first established, registered, or publicly announced. Use ISO 8601 format (YYYY-MM-DD) when possible.```
 
-Validation steps: ```Making the best effort to figure out when this Profile launched, can often be found on their social media bio (e.g. when they setup the account) or in their first white paper. The Founding Date may also be when the Profile published their first piece of content (e.g. their website, their first Tweet, their first LinkedIn post). Always put in a date where possible but month and year is acceptable.```
+Validation steps: ```1. Check the Profile's website, about page, or documentation for information on when they were founded or launched.
+2. Look for official announcements, press releases, or blog posts that mention the Profile's founding date.
+3. If only a month and year are available, use the first day of that month (e.g. 2022-01-01 for January 2022).```
 
 In DBD: ```True```
 
-Notes: 
+Notes:: 
 

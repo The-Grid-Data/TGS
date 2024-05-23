@@ -8,3 +8,5 @@ tgs-004/python/generated_md_files/
 tgs-004/python/credentials.py
 
 tgs-004/go/credentials.go
+
+tgs-004/python/__pycache__/credentials.cpython-312.pyc

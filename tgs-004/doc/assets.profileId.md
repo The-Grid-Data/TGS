@@ -10,11 +10,11 @@ Type: ```Link to another Table```
 
 Specifications: 
 
-Description: ```What Profile this Asset is associated with.```
+Description: ```A reference to the Profile associated with the Asset, using the Profile's unique identifier or name.```
 
 Validation steps: 
 
 In DBD: ```False```
 
-Notes: 
+Notes:: 
 

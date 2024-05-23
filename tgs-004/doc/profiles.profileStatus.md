@@ -8,13 +8,15 @@ Parameter ID: ```profiles.profileStatus```
 
 Type: ```Link to another Table```
 
-Specifications: ```Profile - Sector / Subsector```
+Specifications: ```Profile - Sector / Types```
 
-Description: ```What is the Profile’s current stage?```
+Description: ```The current operational state of the Profile (e.g. Active, Inactive, Closed). Refer to the standardized list of status options.```
 
-Validation steps: ```If a person can only interact one way with the profile (e.g. sign up for newsletter, follow on Twitter), then the profile is Announced. If a person can successfully have a two-way interaction with the profile’s offering (e.g. use the product or service, build on the blockchain), then the profile is Active. If a person has frequent unsuccessful interactions with the profile’s offering (e.g. product does not function as intended, the platform’s data is out of date), then the profile is Inactive. If a person can no longer interact with the profile’s offering, or if the entity has announced the profile’s closure, then the profile is Closed.```
+Validation steps: ```1. Check the Profile's website and social media for any announcements regarding their operational status and if they have a live product.
+2. Attempt to interact with the Profile's products or services to confirm if they are functional and actively maintained.
+3. Ensure the selected status aligns with the standardized list of status options.```
 
 In DBD: ```True```
 
-Notes: 
+Notes:: 
 

@@ -10,11 +10,13 @@ Type: ```Image```
 
 Specifications: ```URL```
 
-Description: ```Standard size image of the visual identity of the Profile with a transparent background, use PNG or SVG```
+Description: ```A square PNG or SVG image file representing the Profile's logo, with a transparent background and a minimum resolution of 256x256 pixels.```
 
-Validation steps: ```This image should be recognizable as the profile’s visual identity in both color and black-and-white. For example, if the Profile modifies their Logo to celebrate holidays or special occasions, a person should still be able to identify the visual identity of the brand within the graphic.```
+Validation steps: ```1. Check the Profile's website, media kit, or brand guidelines for its official logo.
+2. Confirm the image is in PNG or SVG format, has a transparent background, and is square in shape.
+3. Verify the image has a minimum resolution of 256x256 pixels and is visually clear and recognizable.```
 
 In DBD: ```True```
 
-Notes: ```Consider the creation of 2 logos, one the logo without the name (icon) and one with the name, full logo. ```
+Notes:: ```Consider the creation of 2 logos, one the logo without the name (icon) and one with the name, full logo. ```
 

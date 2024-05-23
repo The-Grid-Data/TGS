@@ -10,11 +10,13 @@ Type: ```Image```
 
 Specifications: 
 
-Description: ```Standard square Image of the Logo of the Token (if different from the Profile) with a transparent background, use PNG or SVG```
+Description: ```A square PNG but ideally an SVG image file representing the Asset's icon or logo, with a transparent background and a minimum resolution of 128x128 pixels.```
 
-Validation steps: ```The file extension will likely end in .PNG or .SVG , and it will be square in format. The file name may include the words “logo”, “icon”, or “favicon”.```
+Validation steps: ```1. Check the Asset's website, documentation, or media kit for its official icon or logo.
+2. Confirm the image is in PNG or SVG format, has a transparent background, and is square in shape.
+3. Verify the image has a minimum resolution of 128x128 pixels and is visually clear and recognizable.```
 
 In DBD: ```True```
 
-Notes: ```Best to get from team official site What is an on-chain data for a logo?```
+Notes:: ```Best to get from team official site What is an on-chain data for a logo?```
 

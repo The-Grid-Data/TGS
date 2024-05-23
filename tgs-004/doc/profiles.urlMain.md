@@ -10,11 +10,13 @@ Type: ```URL```
 
 Specifications: 
 
-Description: ```Links to the main website of the Profile. At the moment we use only domain name (like bitcoin.org) for technical reasons.```
+Description: ```The primary official website URL for the Profile. Use the root domain without "www" or "https://".```
 
-Validation steps: ```Check social media and Google to confirm that this the main URL of the profile. Confirm that it is not a ‘similar’ URL. Domain name (without https or www). Must be unique. ```
+Validation steps: ```1. Check the Profile's social media accounts, press releases, and other official sources to confirm their main website URL.
+2. Ensure the URL is the root domain and does not include "www" or "https://".
+3. Validate that the URL leads to an active website related to the Profile.```
 
 In DBD: ```True```
 
-Notes: 
+Notes:: 
 

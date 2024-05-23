@@ -10,11 +10,13 @@ Type: ```Yes/No```
 
 Specifications: ```Boolean for now```
 
-Description: ```Is this the primary service or offering of the Profile that it is a part of?```
+Description: ```A boolean value indicating whether the product is the Profile's primary or flagship offering.```
 
-Validation steps: ```This Product may generate the majority of revenue for the Profile. It may have the most DAU or downloads of the Profile’s suite of offerings.```
+Validation steps: ```1. Check the Profile's website, marketing materials, or documentation to determine its main product or offering.
+2. Confirm the value is set to "true" for the Profile's primary product and "false" for secondary or ancillary products.
+3. If a Profile has multiple main products, consider splitting them into separate entries or updating the data model to accommodate this scenario.```
 
 In DBD: ```True```
 
-Notes: 
+Notes:: 
 

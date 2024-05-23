@@ -10,11 +10,13 @@ Type: ```Long text```
 
 Specifications: 
 
-Description: ```In 3 to 5 sentences, briefly expands on what this profile does and for whom, and can also briefly explain why. It does not need to explain how.```
+Description: ```A more detailed overview of the Profile, including its mission, target audience, and key features or offerings. Limit to 500 characters and avoid subjective claims.```
 
-Validation steps: ```Description is written in third person singular. Description may give more detail about what the profile is. Description may give more detail about whom the profile serves. Description may include a mission statement or goals. Description cannot have any content that is subject to change frequently or in a timely manner. Description cannot make any claims subject to opinion. Does not include links or calls to action.```
+Validation steps: ```1. Ensure the description provides a clear and objective overview of the Profile's purpose and offerings.
+2. Confirm the description is written in the third person and does not include subjective claims or opinions.
+3. Verify the description is within the 500-character limit.```
 
 In DBD: ```True```
 
-Notes: ```Why so short, even as a “long” description: The shorter the description, the less we have to validate.```
+Notes:: ```Why so short, even as a “long” description: The shorter the description, the less we have to validate.```
 

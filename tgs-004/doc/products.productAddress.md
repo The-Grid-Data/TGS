@@ -10,11 +10,13 @@ Type: ```Long text```
 
 Specifications: 
 
-Description: ```What is the main smart contract address of this product, if any?```
+Description: ```The smart contract address(es) associated with the product, if applicable. Use a comma-separated list if multiple addresses are relevant.```
 
-Validation steps: ```This text is most likely a sequence of numbers and letters, with no spaces in between.```
+Validation steps: ```1. Check the product's documentation, website, or blockchain explorer for its smart contract address(es).
+2. Confirm the address(es) are valid and match the expected format for the relevant blockchain(s).
+3. If multiple addresses are listed, ensure they are separated by commas and relate to the same product.```
 
 In DBD: ```True```
 
-Notes: 
+Notes:: 
 

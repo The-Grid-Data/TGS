@@ -10,11 +10,13 @@ Type: ```URL```
 
 Specifications: 
 
-Description: ```Link to the website for this Entity. Sometimes might be different from main URL for the Profile```
+Description: ```The primary official website URL for the Entity, not the profile. The holding company may have a separate URL. ```
 
-Validation steps: ```Domain name (without https or www). Must be unique. This website may have more information about the Entity’s operations and less marketing material for their target audience.```
+Validation steps: ```1. Check the Entity's registration documents, regulatory filings, or other official records for its website URL.
+2. Confirm the URL is the root domain and does not include "www" or "https://".
+3. Validate that the URL leads to an active website related to the Entity and its associated Profile.```
 
 In DBD: ```True```
 
-Notes: 
+Notes:: 
 

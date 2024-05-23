@@ -10,11 +10,13 @@ Type: ```URL```
 
 Specifications: 
 
-Description: ```Direct URL to where the service or offering can be accessed, either subdomain or folder```
+Description: ```The primary URL where users can access or download the product. Use the root domain without "www" or "https://".```
 
-Validation steps: ```Domain name (without https or www). Must be unique. Is not the same as the Profile URL, but may be a subpage or subdomain of it. Should not be a link to a third party app store (e.g., Google Play).```
+Validation steps: ```1. Check the product's official website or app store page for the main URL.
+2. Confirm the URL is the root domain and does not include "www" or "https://".
+3. Validate that the URL leads to a page where users can directly access or download the product.```
 
 In DBD: ```True```
 
-Notes: 
+Notes:: 
 

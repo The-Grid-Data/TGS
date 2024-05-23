@@ -10,11 +10,13 @@ Type: ```Short Text```
 
 Specifications: 
 
-Description: ```Other names this Entity commonly goes by. Also called Doing Business As (DBA)```
+Description: ```Any additional trading names, brands, or trademarks associated with the Entity, separate from its legal name.```
 
-Validation steps: ```This name may be frequently used on the same website where the Terms and Conditions can be found. This name may also match the name of the linked Profile.```
+Validation steps: ```1. Check the Entity's website, Terms of Service, or other legal documentation for mentions of additional trading names or brands.
+2. Look for consistency in how these names are used across official sources and public records.
+3. Confirm that the trade names are distinct from the Entity's legal name.```
 
 In DBD: ```True```
 
-Notes: ```Could be multiple?```
+Notes:: ```Could be multiple?```
 
