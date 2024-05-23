@@ -7,7 +7,7 @@ from credentials import db_config
 # Path to the CSV file
 csv_file_path = 'tgs.csv'
 
-# Function to load data from CSV and insert into the database
+# Function to load data from CSV and insert/update into the database
 def load_data(csv_path):
     # Load data from CSV
     data = pd.read_csv(csv_path)
@@ -35,13 +35,14 @@ def load_data(csv_path):
                     # Comma-separated dataframe columns
                     cols = ', '.join(f"`{col}`" for col in data.columns)
 
-                    # Constructing the query string, with placeholders
-                    query = f"INSERT INTO `DbTGS` ({cols}) VALUES ({', '.join(['%s'] * len(data.columns))})"
+                    # Constructing the query string with ON DUPLICATE KEY UPDATE clause
+                    update_cols = ', '.join([f"`{col}` = VALUES(`{col}`)" for col in data.columns if col != 'Parameter_ID'])
+                    query = f"INSERT INTO `DbTGS` ({cols}) VALUES ({', '.join(['%s'] * len(data.columns))}) ON DUPLICATE KEY UPDATE {update_cols}"
 
                     # Execute the query as a single transaction
                     cursor.executemany(query, tuples)
                     conn.commit()
-                    print("Data inserted successfully")
+                    print("Data inserted/updated successfully")
     except Error as e:
         print(f"Error: {e}")
         if conn.is_connected():
