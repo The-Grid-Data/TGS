@@ -23,7 +23,6 @@ func Test_TGS_005_fetch(t *testing.T) {
 		READ_TGS_PARAMS_LOCALLY = false
 	}()
 
-	t.Logf("Testing locally")
 	err = test(indexFileURL)
 	if err != nil {
 		t.Fatalf("Parsing failed: %v", err)
