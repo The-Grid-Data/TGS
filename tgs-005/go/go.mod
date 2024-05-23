@@ -1,4 +1,4 @@
-module github.com/The-Grid-Data/TGS/tgs-004/go/v5
+module github.com/The-Grid-Data/TGS/tgs-005/go/v5
 
 go 1.22
 
