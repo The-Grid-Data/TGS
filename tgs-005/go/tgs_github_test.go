@@ -18,7 +18,7 @@ func Test_TGS_005_fetch(t *testing.T) {
 	//	t.Fatalf("Fetch failed: %v", err)
 	//}
 
-	READ_TGS_PARAMS_LOCALLY = true
+	READ_TGS_PARAMS_LOCALLY = !true
 	defer func() {
 		READ_TGS_PARAMS_LOCALLY = false
 	}()
