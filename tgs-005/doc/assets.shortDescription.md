@@ -8,7 +8,7 @@ Parameter ID: ```assets.shortDescription```
 
 Type: ```Long text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```A concise, one-sentence summary of the Asset's key characteristics, use case, or value proposition. Limit to 200 characters and avoid subjective claims.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Asset's website, whitepaper, or documentation 
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

@@ -8,7 +8,7 @@ Parameter ID: ```entities.parentEntity```
 
 Type: ```Link to another Row```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```A reference to the parent Entity, if applicable, using the parent Entity's unique identifier or name.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Entity's website, regulatory filings, or owner
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

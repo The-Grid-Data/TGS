@@ -8,7 +8,7 @@ Parameter ID: ```assets.ticker```
 
 Type: ```Short Text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The unique trading symbol used to represent the Asset on exchanges and trading platforms. Use only capital letters and numbers.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Asset's page on major crypto data aggregators 
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

@@ -8,7 +8,7 @@ Parameter ID: ```entities.country```
 
 Type: ```Single Option```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The country in which the Entity is legally registered or incorporated, using the ISO 3166-1 alpha-2 country code format.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Entity's registration documents, regulatory fi
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

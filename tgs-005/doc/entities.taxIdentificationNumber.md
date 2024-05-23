@@ -8,7 +8,7 @@ Parameter ID: ```entities.taxIdentificationNumber```
 
 Type: ```Short Text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The unique tax identification number assigned to the Entity by the relevant tax authority, if applicable.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Entity's tax documents, regulatory filings, or
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

@@ -8,7 +8,7 @@ Parameter ID: ```products.mainAsset```
 
 Type: ```Link to another Table```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The main asset that the product supports or is required for functioning of the product. For example, In the case of an L1 like Ethereum, this would be ETH. ```
 

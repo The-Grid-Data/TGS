@@ -8,7 +8,7 @@ Parameter ID: ```products.descriptionShort```
 
 Type: ```Long text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```A concise, objective statement explaining what the product does and who it is for. Avoid subjective claims or technical jargon. This must be under 140 characters.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Ensure the description clearly states the product's core
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

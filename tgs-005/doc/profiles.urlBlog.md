@@ -8,7 +8,7 @@ Parameter ID: ```profiles.urlBlog```
 
 Type: ```URL```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The URL of the Profile's primary blog or news section. Use the root domain without "www" or "https://".```
 

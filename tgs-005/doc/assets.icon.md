@@ -8,7 +8,7 @@ Parameter ID: ```assets.icon```
 
 Type: ```Image```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```A square PNG but ideally an SVG image file representing the Asset's icon or logo, with a transparent background and a minimum resolution of 128x128 pixels.```
 

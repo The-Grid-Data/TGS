@@ -8,7 +8,7 @@ Parameter ID: ```profiles.descriptionLong```
 
 Type: ```Long text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```A more detailed overview of the Profile, including its mission, target audience, and key features or offerings. Limit to 500 characters and avoid subjective claims.```
 

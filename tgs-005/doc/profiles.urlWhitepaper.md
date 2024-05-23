@@ -8,7 +8,7 @@ Parameter ID: ```profiles.urlWhitepaper```
 
 Type: ```URL```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The URL of the Profile's most recent whitepaper or technical document outlining its technology, roadmap, and token economics. Use the root domain without "www" or "https://".```
 

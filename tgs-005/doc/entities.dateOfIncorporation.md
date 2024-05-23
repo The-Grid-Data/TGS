@@ -8,7 +8,7 @@ Parameter ID: ```entities.dateOfIncorporation```
 
 Type: ```Date```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The date when the Entity was legally registered or incorporated. Use ISO 8601 format (YYYY-MM-DD) when possible.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Entity's registration documents or regulatory 
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

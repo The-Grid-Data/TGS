@@ -18,5 +18,5 @@ Validation steps: ```1. Review the Asset's documentation and website to understa
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

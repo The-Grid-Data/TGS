@@ -8,7 +8,7 @@ Parameter ID: ```entities.leiNumber```
 
 Type: ```Short Text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The Legal Entity Identifier (LEI) code assigned to the Entity by the Global Legal Entity Identifier Foundation (GLEIF), if applicable.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Entity's regulatory filings, public records, o
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

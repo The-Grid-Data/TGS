@@ -8,7 +8,7 @@ Parameter ID: ```profiles.urlMain```
 
 Type: ```URL```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The primary official website URL for the Profile. Use the root domain without "www" or "https://".```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Profile's social media accounts, press release
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

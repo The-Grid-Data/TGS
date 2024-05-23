@@ -8,7 +8,7 @@ Parameter ID: ```assets.assetStandard```
 
 Type: ```Link to another Table```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The technical standard or protocol the Asset adheres to, based on the blockchain it is deployed on (e.g. ERC-20, BEP-20).```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Asset's official documentation or smart contra
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

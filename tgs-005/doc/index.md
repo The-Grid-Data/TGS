@@ -53,7 +53,7 @@
 - [assets.urlToAssetDocs](assets.urlToAssetDocs.md)
 - [assets.address](assets.address.md)
 - [assets.assetStandard](assets.assetStandard.md)
-- [assets.deployedOn](assets.deployedOn.md)
+- [assets.deployedOnProduct](assets.deployedOnProduct.md)
 - [assets.profileId](assets.profileId.md)
 # socials
 

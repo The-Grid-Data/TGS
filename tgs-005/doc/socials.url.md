@@ -8,7 +8,7 @@ Parameter ID: ```socials.url```
 
 Type: ```URL```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The URL of the Profile's official social media account or page on the specified platform. Use the full URL, including "https://" and any relevant subdomains or paths.```
 

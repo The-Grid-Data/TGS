@@ -8,7 +8,7 @@ Parameter ID: ```socials.name```
 
 Type: ```Short Text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The name or handle associated with the Profile's social media account on the specified platform. This should match the name displayed on the social media profile page.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Profile's social media account on the specifie
 
 In DBD: ```False```
 
-Notes:: 
+Notes:: ``` ```
 

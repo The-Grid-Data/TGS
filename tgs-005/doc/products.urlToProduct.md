@@ -8,7 +8,7 @@ Parameter ID: ```products.urlToProduct```
 
 Type: ```URL```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The primary URL where users can access or download the product. Use the root domain without "www" or "https://".```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the product's official website or app store page f
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

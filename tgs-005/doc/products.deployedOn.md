@@ -8,7 +8,7 @@ Parameter ID: ```products.deployedOn```
 
 Type: ```Link to another Row```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The blockchain network(s) or platform(s) on which the product is deployed or built upon.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the product's documentation, website, or smart con
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

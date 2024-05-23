@@ -8,7 +8,7 @@ Parameter ID: ```assets.urlToAssetDocs```
 
 Type: ```URL```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The URL of the Asset's official documentation, whitepaper, or technical specification. Use the root domain without "www" or "https://".```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Asset's website, blog, or community resources 
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

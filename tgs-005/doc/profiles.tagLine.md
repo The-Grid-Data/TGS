@@ -8,7 +8,7 @@ Parameter ID: ```profiles.tagLine```
 
 Type: ```Long text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```A brief, memorable phrase or slogan used by the Profile to convey its mission, value proposition, or unique selling point. Limit to 100 characters.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Profile's website, marketing materials, or soc
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

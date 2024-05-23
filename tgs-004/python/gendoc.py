@@ -23,7 +23,7 @@ def generate_markdown_content(row):
 
     for col, val in row.items():
         if pd.isna(val):
-            md_content += f"{col}: \n\n"
+            md_content += f"{col}: ``` ```\n\n"
         else:
             md_content += f"{col}: ```{val}```\n\n"
 

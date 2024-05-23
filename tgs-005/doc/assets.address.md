@@ -8,7 +8,7 @@ Parameter ID: ```assets.address```
 
 Type: ```Long text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The unique smart contract address of the Asset on the blockchain it is deployed on. Use a standard blockchain explorer to validate the address.```
 

@@ -8,7 +8,7 @@ Parameter ID: ```profiles.descriptionShort```
 
 Type: ```Long text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```A concise, one-sentence summary of the Profile's primary purpose, product, or service. Limit to 140 characters and avoid subjective claims.```
 

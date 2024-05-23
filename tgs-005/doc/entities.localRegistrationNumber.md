@@ -8,7 +8,7 @@ Parameter ID: ```entities.localRegistrationNumber```
 
 Type: ```Short Text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The registration number assigned to the Entity by the relevant regulatory body or government agency, if applicable.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Entity's registration documents, regulatory fi
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

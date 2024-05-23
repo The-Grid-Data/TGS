@@ -8,7 +8,7 @@ Parameter ID: ```profiles.foundingDate```
 
 Type: ```Date```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The date when the Profile was first established, registered, or publicly announced. Use ISO 8601 format (YYYY-MM-DD) when possible.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Profile's website, about page, or documentatio
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

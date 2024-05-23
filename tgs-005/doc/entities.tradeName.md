@@ -8,7 +8,7 @@ Parameter ID: ```entities.tradeName```
 
 Type: ```Short Text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```Any additional trading names, brands, or trademarks associated with the Entity, separate from its legal name.```
 

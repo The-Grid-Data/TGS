@@ -8,7 +8,7 @@ Parameter ID: ```entities.urlToEntity```
 
 Type: ```URL```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The primary official website URL for the Entity, not the profile. The holding company may have a separate URL. ```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Entity's registration documents, regulatory fi
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

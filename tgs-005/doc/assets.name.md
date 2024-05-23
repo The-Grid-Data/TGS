@@ -8,7 +8,7 @@ Parameter ID: ```assets.name```
 
 Type: ```Short Text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The official name of the Asset as used in its branding, marketing, and trading materials.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Asset's website, whitepaper, and documentation
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

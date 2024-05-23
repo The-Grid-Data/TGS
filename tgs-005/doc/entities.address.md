@@ -8,7 +8,7 @@ Parameter ID: ```entities.address```
 
 Type: ```Short Text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The registered physical address of the Entity, including street, city, state/province (if applicable), and postal code.```
 

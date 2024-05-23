@@ -8,7 +8,7 @@ Parameter ID: ```entities.profile```
 
 Type: ```Link to another Table```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```A reference to the Profile associated with the Entity, using the Profile's unique identifier or name.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Entity's website, regulatory filings, or publi
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

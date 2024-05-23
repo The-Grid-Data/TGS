@@ -8,7 +8,7 @@ Parameter ID: ```products.name```
 
 Type: ```Short Text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The official name of the product as used in its branding, marketing, and user-facing materials.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the product's website, app store page, and documen
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

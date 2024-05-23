@@ -8,7 +8,7 @@ Parameter ID: ```entities.name```
 
 Type: ```Short Text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The legal name of the Entity as registered with the relevant regulatory bodies or government agencies.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Entity's registration documents, regulatory fi
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

@@ -8,7 +8,7 @@ Parameter ID: ```profiles.name```
 
 Type: ```Short Text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The full official name of the Profile, as used in their branding, documentation, and across online platforms.```
 

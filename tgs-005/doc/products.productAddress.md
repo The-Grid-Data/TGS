@@ -8,7 +8,7 @@ Parameter ID: ```products.productAddress```
 
 Type: ```Long text```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```The smart contract address(es) associated with the product, if applicable. Use a comma-separated list if multiple addresses are relevant.```
 
@@ -18,5 +18,5 @@ Validation steps: ```1. Check the product's documentation, website, or blockchai
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

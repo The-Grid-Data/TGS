@@ -18,5 +18,5 @@ Validation steps: ```1. Check the product's website, app store page, or document
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

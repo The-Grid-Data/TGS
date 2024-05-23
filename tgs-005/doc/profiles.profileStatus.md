@@ -18,5 +18,5 @@ Validation steps: ```1. Check the Profile's website and social media for any ann
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 

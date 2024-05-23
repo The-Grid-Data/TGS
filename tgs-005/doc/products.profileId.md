@@ -8,13 +8,13 @@ Parameter ID: ```products.profileId```
 
 Type: ```Link to another Table```
 
-Specifications: 
+Specifications: ``` ```
 
 Description: ```A reference to the Profile associated with the product, using the Profile's unique identifier or name.```
 
-Validation steps: 
+Validation steps: ``` ```
 
 In DBD: ```True```
 
-Notes:: 
+Notes:: ``` ```
 
