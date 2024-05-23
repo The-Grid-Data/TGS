@@ -47,7 +47,7 @@ def fetch_all_parameters(index_file_url):
     return all_parameters
 
 # Example usage:
-index_file_url = 'https://github.com/The-Grid-Data/TGS/blob/main/tgs-004/doc/index.md'
+index_file_url = 'https://github.com/The-Grid-Data/TGS/blob/main/tgs-005/doc/index.md'
 repo_base_url = '/'.join(index_file_url.split('/')[:-1]).replace('blob/', '').replace('github.com',
                                                                                       'raw.githubusercontent.com')
 
