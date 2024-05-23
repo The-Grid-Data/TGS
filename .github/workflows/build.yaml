@@ -20,6 +20,6 @@ jobs:
 
     - name: Run tests
       run: |
-        cd tgs-004/go/
+        cd tgs-005/go/
         echo "Running tests in $(pwd)"  # This line will print the current directory
         go test -v ./...
