@@ -1,4 +1,4 @@
-package tgs_004
+package tgs_005
 
 import (
 	"encoding/json"
@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func Test_TGS_004_fetch(t *testing.T) {
+func Test_TGS_005_fetch(t *testing.T) {
 	indexFileURL := "https://github.com/The-Grid-Data/TGS/blob/main/tgs-005/doc/index.md"
 
 	var err error
